@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Iniciar Sesión</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">  
+   </head>
+  <body>
+
+
+      <div class="overlay">
+         <h1></h1>
+         <center>
+         <h1>Ingreso</h1>
+      </center>
+          <div th:if="${error==true}">
+            <div class="alert alert-danger" role="alert">
+              Usuario o Contraseña incorrectos. Intente nuevamente.
+            </div>
+          </div>
+           
+         
+            <!-- LOGN IN FORM by Omar Dsoky -->
+            <form th:action="login" method="post" th:object="${credencial}">
+               <!--   con = Container  for items in the form-->
+               <div class="con">
+               <!--     Start  header Content  -->
+               <header class="head-form">
+                  <h2>Ingreso Usuarios</h2>
+                  <!--     A welcome message or an explanation of the login form -->
+                  <p>Ingrese aquí su usuario y su contraseña</p>
+               </header>
+               <!--     End  header Content  -->
+               <br>
+               <div class="field-set">
+                 
+                  <!--   user name -->
+                     <span class="input-item">
+                       <i class="fa fa-user-circle"></i>
+                     </span>
+                    <!--   user name Input-->
+                     <input th:field="*{rut}" class="form-input" id="txt-input" type="text" placeholder="@UserName" >
+                 
+                  <br>
+                 
+                       <!--   Password -->
+                 
+                  <span class="input-item">
+                    <i class="fa fa-key"></i>
+                   </span>
+                  <!--   Password Input-->
+                  <input th:field="*{password}" class="form-input" type="password" placeholder="Contraseña" id="pwd"  name="password" >
+                 
+            <!--      Show/hide password  -->
+                 <span>
+                    <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
+                 </span>
+                 
+                 
+                  <br>
+            <!--        buttons -->
+            <!--      button LogIn -->
+                  <button class="log-in"> Ingresar! </button>
+               </div>
+              
+            <!--   other buttons -->
+          
+                 
+            <!--   End Conrainer  -->
+              </div>
+              
+              <!-- End Form -->
+            </form>
+            </div>
+      
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

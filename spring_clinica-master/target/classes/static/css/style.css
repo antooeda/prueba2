@@ -1,0 +1,38 @@
+body{
+    background-color:beige;
+}
+
+h1{
+    font-family: fantasy;
+    font-size: 100px;
+}
+h4{
+    font-family: auto;
+}
+h6{
+    font-family: fantasy; 
+}
+.encabezado{
+    background-color: white;
+    
+}
+
+
+.carrusel{
+    align-items: center;
+    margin: 10%;
+    margin-top: 10%;
+}
+
+
+
+.con{
+  background-color: burlywood;
+
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
